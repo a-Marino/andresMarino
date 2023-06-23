@@ -1,0 +1,9 @@
+/* #about {
+  background-image: url("https://res.cloudinary.com/dv8nczwtj/image/upload/v1687538628/Portfolio/backgroundGradientAbout_eofazl.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+#border {
+  border-color: var(--yellow);
+}
