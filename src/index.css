@@ -1,66 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --yellow: #ffc700;
-  --red: #f2371f;
-  --green: #1bc47d;
-  --blue: #18a0fb;
+@font-face {
+  font-family: "IFKica-Regular";
+  src: url("/fonts/IFKica-Regular.ttf");
 }
 
 @font-face {
-  font-family: "KC NeueTeeth";
-  src: url("/fonts/KCNeueTeeth.otf");
+  font-family: "IFKica-Bold";
+  src: url("/fonts/IFKica-Bold.ttf");
 }
 
 @font-face {
-  font-family: "KC NeueTeeth-Inked";
-  src: url("/fonts/KCNeueTeeth-Inked.otf");
+  font-family: "IFKica-Light";
+  src: url("/fonts/IFKica-Light.ttf");
 }
 
-.KCNeueTeeth {
-  font-family: "KC NeueTeeth";
+.kicaRegular {
+  font-family: "IFKica-Regular";
 }
 
-.KCNeueTeeth-Inked {
-  font-family: "KC NeueTeeth-Inked";
+.kicaBold {
+  font-family: "IFKica-Bold";
 }
 
-.Spline {
-  font-family: "Spline Sans Mono", monospace;
-}
-
-.red {
-  color: var(--red);
-}
-
-.yellow {
-  color: var(--yellow);
-}
-
-.green {
-  color: var(--green);
-}
-
-.blue {
-  color: var(--blue);
+.kicaLight {
+  font-family: "IFKica-Light";
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: 0;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 body {
   width: 100%;
   height: 100%;
-  color: white;
+  background-color: black;
 }

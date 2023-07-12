@@ -1,55 +1,64 @@
-import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
 import ScrollIntoView from "react-scroll-into-view";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 export const Nav = () => {
   const { pathname } = useLocation();
+  const headerRef = useRef();
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.8,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const { isIntersecting } = entry;
+        if (isIntersecting) {
+          const color = entry.target.getAttribute("data-header-color");
+          headerRef.current.style.color = color;
+        }
+      });
+    }, observerOptions);
+
+    const sectionElements = document.querySelectorAll(".landing-section");
+    sectionElements.forEach((section) => observer.observe(section));
+  }, [pathname]);
 
   if (pathname === "/projects") {
     return (
-      <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="flex justify-end w-full space-x-5  text-xl md:text-[1.5rem] fixed z-[2] py-3 px-5 Spline"
-      >
+      <header className="flex justify-end w-full space-x-5  text-lg md:text-[1.5rem] fixed z-[2] py-3 px-3 md:px-10 kicaLight">
         <NavLink
           to="/"
-          className="hover:text-black transition-colors cursor-pointer duration-500"
+          className="transition cursor-pointer duration-500 hover:scale-110 text-white"
         >
           Home
         </NavLink>
-        <NavLink
-          to="/projects"
-          className="hover:text-black transition-colors cursor-pointer duration-500"
-        >
-          Projects
-        </NavLink>
-      </motion.header>
+      </header>
     );
   }
 
   return (
-    <motion.header
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      className="flex justify-end w-full space-x-5  text-xl md:text-[1.5rem] fixed z-[2] py-3 px-5 Spline"
+    <header
+      className="flex justify-end w-full space-x-5  text-lg md:text-[1.5rem] fixed z-[2] py-3 md:px-10 px-3 kicaLight text-current"
+      ref={headerRef}
     >
       <ScrollIntoView
         smooth
         selector="#about"
-        className="hover:text-black transition-colors cursor-pointer duration-500"
+        className="transition cursor-pointer duration-500 hover:scale-110"
       >
         About
       </ScrollIntoView>
       <NavLink
         to="/projects"
-        className="hover:text-black transition-colors cursor-pointer duration-500"
+        className=" transition cursor-pointer duration-500 hover:scale-110"
       >
         Projects
       </NavLink>
-    </motion.header>
+    </header>
   );
 };

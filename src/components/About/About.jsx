@@ -1,47 +1,22 @@
-import { motion } from "framer-motion";
 import "./About.css";
 
 export const About = () => {
   return (
-    <div id="about" className="h-screen w-full flex flex-col pt-20 px-10">
-      <div className="flex flex-col w-full">
-        <motion.h2
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="yellow text-8xl md:text-[10rem] KCNeueTeeth-Inked md:ml-10"
-        >
-          ABOUT
-        </motion.h2>
-        <p className="Spline text-xl md:text-2xl font-light md:p-10">
-          I&apos;m Andres Marino, a front-end developer from Argentina.
-          Passionate about design, photography, music, and video games.
-          Let&apos;s create visually stunning and user-friendly websites
-          together. Explore my work and let&apos;s bring your digital vision to
-          life!
-        </p>
-        <div className="flex mt-10 justify-center items-center">
-          <motion.button
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-            }}
-            whileHover={{
-              scale: 1.1,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-            }}
-            className="btnDownload flex gap-4 Spline text-xl md:text-2xl"
-          >
-            Download CV
-            <img src="/open.svg" alt="open" className="w-7 self-start" />
-          </motion.button>
-        </div>
+    <div
+      id="about"
+      className="h-screen bg-white landing-section flex md:flex-row flex-col justify-around items-center md:px-5 md:gap-10 md:py-0 py-10"
+      data-header-color="black"
+    >
+      <div className="flex flex-col bg-black p-2 rounded-md text-white kicaLight md:w-[50%] w-[80%] border-2 border-black md:h-[60%] h-[40%]">
+        <h1 className="text-3xl">About</h1>
+        <p>{/* TODO */}</p>
+      </div>
+      <div className="flex flex-col md:w-[50%]  w-[80%]  md:h-[60%] border-2 rounded-md p-2 border-black kicaLight h-[40%]">
+        <span className="text-3xl">Skills</span>
+        {/* TODO LIST */}
       </div>
     </div>
   );
 };
+
+//  INSPO https://www.behance.net/gallery/170477261/Kica-Display-Font
