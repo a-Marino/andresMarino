@@ -17,6 +17,10 @@
   src: url("/fonts/IFKica-Light.ttf");
 }
 
+.green {
+  color: #00ff7f;
+}
+
 .kicaRegular {
   font-family: "IFKica-Regular";
 }

@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^10.12.17",
+    "@nextui-org/react": "^0.0.0-dev-v2-20230719131057",
+    "framer-motion": "^10.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-router-dom": "^6.13.0",
     "react-router-hash-link": "^2.4.3",
     "react-scroll-into-view": "^1.12.1"
