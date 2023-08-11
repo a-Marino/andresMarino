@@ -1,16 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { routes } from "./routes/Routes";
-import { Layout } from "./layout/Layout";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home/Home';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          {routes.map(({ id, path, Element }) => (
-            <Route key={id} path={path} element={<Element />} />
-          ))}
-        </Route>
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

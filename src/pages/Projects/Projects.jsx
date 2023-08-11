@@ -1,11 +1,10 @@
-import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
-import { projects } from "../../ProjectMock";
+import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
+import { projects } from '../../ProjectMock';
 
 export const Projects = () => {
   return (
-    <div className="min-h-screen w-full text-white py-20 md:px-10 px-5">
-      <h1 className="md:text-6xl text-4xl kicaRegular">Projects</h1>
-      <div className="flex flex-col md:flex-row flex-wrap mt-10 gap-5">
+    <div className="w-full text-white md:px-10 px-5 py-5">
+      <div className="flex flex-col md:flex-row flex-wrap gap-10 justify-center">
         {projects.map((project) => {
           return (
             <ProjectCard
