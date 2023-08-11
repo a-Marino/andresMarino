@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "IFKica-Regular";
-  src: url("/fonts/IFKica-Regular.ttf");
+  font-family: 'IFKica-Regular';
+  src: url('/fonts/IFKica-Regular.ttf');
 }
 
 @font-face {
-  font-family: "IFKica-Bold";
-  src: url("/fonts/IFKica-Bold.ttf");
+  font-family: 'IFKica-Bold';
+  src: url('/fonts/IFKica-Bold.ttf');
 }
 
 @font-face {
-  font-family: "IFKica-Light";
-  src: url("/fonts/IFKica-Light.ttf");
+  font-family: 'IFKica-Light';
+  src: url('/fonts/IFKica-Light.ttf');
 }
 
 .green {
@@ -22,15 +22,15 @@
 }
 
 .kicaRegular {
-  font-family: "IFKica-Regular";
+  font-family: 'IFKica-Regular';
 }
 
 .kicaBold {
-  font-family: "IFKica-Bold";
+  font-family: 'IFKica-Bold';
 }
 
 .kicaLight {
-  font-family: "IFKica-Light";
+  font-family: 'IFKica-Light';
 }
 
 * {
