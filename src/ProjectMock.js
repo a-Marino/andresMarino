@@ -26,4 +26,13 @@ export const projects = [
     deploy: 'https://streaming-service-fawn.vercel.app',
     github: 'https://github.com/a-Marino/streamingService',
   },
+  {
+    id: 4,
+    title: 'gym System',
+    chips: ['ReactJs', 'TailwindCss', 'Firebase', 'NodeJs'],
+    img: 'https://res.cloudinary.com/dv8nczwtj/image/upload/v1724424521/Screenshot_2024-08-23_114601_jbve9q.png',
+    description: 'Gym web with Classes, Plans, Account Managment, etc.',
+    deploy: 'https://gym-sys.vercel.app/',
+    github: 'https://github.com/a-Marino/gymSys',
+  },
 ];
